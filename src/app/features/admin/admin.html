@@ -1,0 +1,102 @@
+<section class="space-y-8">
+  <h1 class="text-3xl font-bold text-main">Administrar títulos</h1>
+
+  <form
+    (ngSubmit)="save()"
+    class="bg-white border border-slate-200 rounded-lg shadow-md p-6 grid grid-cols-1 md:grid-cols-2 gap-4"
+  >
+    <h2 class="md:col-span-2 text-xl font-semibold">{{ editing ? 'Editar título' : 'Nuevo título' }}</h2>
+
+    <div>
+      <label for="name" class="block text-sm font-medium mb-1">Nombre</label>
+      <input id="name" name="name" required [(ngModel)]="newItem.name"
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-main" />
+    </div>
+
+    <div>
+      <label for="type" class="block text-sm font-medium mb-1">Tipo</label>
+      <select id="type" name="type" [(ngModel)]="newItem.type"
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-main">
+        <option value="MOVIE">Película</option>
+        <option value="SERIES">Serie</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="year" class="block text-sm font-medium mb-1">Año</label>
+      <input id="year" name="year" type="number" required [(ngModel)]="newItem.year"
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-main" />
+    </div>
+
+    <div>
+      <label for="genre" class="block text-sm font-medium mb-1">Género</label>
+      <input id="genre" name="genre" required [(ngModel)]="newItem.genre"
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-main" />
+    </div>
+
+    <div>
+      <label for="rating" class="block text-sm font-medium mb-1">Calificación (1-10)</label>
+      <input id="rating" name="rating" type="number" min="1" max="10" step="0.1" required [(ngModel)]="newItem.rating"
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-main" />
+    </div>
+
+    <div>
+      <label for="posterUrl" class="block text-sm font-medium mb-1">URL del póster</label>
+      <input id="posterUrl" name="posterUrl" required [(ngModel)]="newItem.posterUrl"
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-main" />
+    </div>
+
+    <div class="md:col-span-2">
+      <label for="synopsis" class="block text-sm font-medium mb-1">Sinopsis</label>
+      <textarea id="synopsis" name="synopsis" rows="3" required [(ngModel)]="newItem.synopsis"
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-main"></textarea>
+    </div>
+
+    <div class="md:col-span-2 flex gap-3">
+      <button type="submit"
+        class="bg-main text-white px-4 py-2 rounded font-semibold shadow-md hover:bg-main-dark hover:shadow-lg cursor-pointer">
+        {{ editing ? 'Actualizar' : 'Guardar' }}
+      </button>
+      <button type="button" (click)="reset()"
+        class="border border-slate-300 px-4 py-2 rounded font-semibold shadow-md hover:shadow-lg cursor-pointer">
+        Cancelar
+      </button>
+    </div>
+  </form>
+
+  <div class="bg-white border border-slate-200 rounded-lg shadow-md overflow-x-auto">
+    <table class="w-full text-sm text-left">
+      <thead class="bg-main text-white">
+        <tr>
+          <th class="px-4 py-3">Nombre</th>
+          <th class="px-4 py-3">Tipo</th>
+          <th class="px-4 py-3">Año</th>
+          <th class="px-4 py-3">Género</th>
+          <th class="px-4 py-3">Calificación</th>
+          <th class="px-4 py-3">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of list(); track item.id) {
+          <tr class="border-t border-slate-200">
+            <td class="px-4 py-3 font-medium">{{ item.name }}</td>
+            <td class="px-4 py-3">{{ item.type === 'MOVIE' ? 'Película' : 'Serie' }}</td>
+            <td class="px-4 py-3">{{ item.year }}</td>
+            <td class="px-4 py-3">{{ item.genre }}</td>
+            <td class="px-4 py-3">★ {{ item.rating }}/10</td>
+            <td class="px-4 py-3 whitespace-nowrap space-x-2">
+              <button type="button" (click)="selectForEdit(item)"
+                class="border border-main text-main px-3 py-1 rounded shadow-md hover:shadow-lg cursor-pointer">Editar</button>
+              <button type="button" (click)="delete(item.id)"
+                class="bg-main text-white px-3 py-1 rounded shadow-md hover:bg-main-dark hover:shadow-lg cursor-pointer">Eliminar</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="6" class="px-4 py-6 text-center text-slate-500">No hay títulos registrados</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

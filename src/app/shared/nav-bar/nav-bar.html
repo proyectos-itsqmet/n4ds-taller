@@ -1,0 +1,27 @@
+<nav class="bg-main text-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+    <a routerLink="/catalog" class="text-xl font-bold">CineFavoritos</a>
+
+    <div class="flex flex-wrap items-center gap-4 text-sm">
+      @if (authService.isAuthenticated()) {
+        @if (authService.currentRol() === 'ADMIN') {
+          <a routerLink="/admin" routerLinkActive="underline" class="hover:underline">Administrar</a>
+          <a routerLink="/catalog" routerLinkActive="underline" class="hover:underline">Catálogo</a>
+        } @else {
+          <a routerLink="/catalog" routerLinkActive="underline" class="hover:underline">Catálogo</a>
+          <a routerLink="/favorites" routerLinkActive="underline" class="hover:underline">Mis favoritos</a>
+        }
+        <span class="font-semibold">{{ authService.currentUser()?.name }}</span>
+        <button
+          type="button"
+          (click)="logout()"
+          class="bg-white text-main px-3 py-1 rounded font-semibold shadow-md hover:shadow-lg cursor-pointer"
+        >
+          Cerrar sesión
+        </button>
+      } @else {
+        <a routerLink="/login" class="hover:underline">Iniciar sesión</a>
+      }
+    </div>
+  </div>
+</nav>

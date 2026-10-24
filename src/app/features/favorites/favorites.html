@@ -1,0 +1,26 @@
+<section>
+  <h1 class="text-3xl font-bold text-main mb-6">Mis favoritos</h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    @for (fav of favorites(); track fav.id) {
+      <article class="bg-white border border-slate-200 rounded-lg shadow-md hover:shadow-lg overflow-hidden flex flex-col">
+        <img [src]="fav.poster_url" [alt]="fav.title_name" class="w-full aspect-[2/3] object-cover bg-slate-100" />
+        <div class="p-4 flex flex-col gap-2 flex-1">
+          <h2 class="font-bold text-lg leading-tight">{{ fav.title_name }}</h2>
+          <span class="self-start text-xs font-semibold bg-main text-white px-2 py-1 rounded">
+            {{ fav.title_type === 'MOVIE' ? 'Película' : 'Serie' }}
+          </span>
+          <button
+            type="button"
+            (click)="remove(fav)"
+            class="mt-auto w-full border border-main text-main py-2 rounded font-semibold shadow-md hover:shadow-lg hover:bg-main hover:text-white cursor-pointer"
+          >
+            Quitar
+          </button>
+        </div>
+      </article>
+    } @empty {
+      <p class="col-span-full text-center text-slate-500">Aún no tienes favoritos</p>
+    }
+  </div>
+</section>

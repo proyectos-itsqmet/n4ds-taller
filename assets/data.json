@@ -1,0 +1,104 @@
+{
+  "titles": [
+    {
+      "name": "The Shawshank Redemption",
+      "type": "MOVIE",
+      "year": 1994,
+      "genre": "Drama",
+      "synopsis": "Un banquero condenado injustamente forja una amistad y esperanza dentro de la prisión de Shawshank.",
+      "rating": 9.3,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_FMjpg_UX1200_.jpg",
+      "id": 1
+    },
+    {
+      "name": "The Godfather",
+      "type": "MOVIE",
+      "year": 1972,
+      "genre": "Crimen",
+      "synopsis": "El patriarca de una familia mafiosa transfiere el control de su imperio a su hijo reacio.",
+      "rating": 9.2,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZmNiNzM4MTctODI5YS00MzczLWE2MzktNzY4YmNjYjA5YmY1XkEyXkFqcGc@._V1_FMjpg_UX800_.jpg",
+      "id": 2
+    },
+    {
+      "name": "The Dark Knight",
+      "type": "MOVIE",
+      "year": 2008,
+      "genre": "Acción",
+      "synopsis": "Batman enfrenta al Joker, un criminal caótico que sumerge a Ciudad Gótica en la anarquía.",
+      "rating": 9,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BN2U3NmZjMTYtY2JhOS00NzU4LWJkMDAtZjFmZjAyN2ZlMTMxXkEyXkFqcGc@._V1_FMjpg_UX1260_.jpg",
+      "id": 3
+    },
+    {
+      "name": "Inception",
+      "type": "MOVIE",
+      "year": 2010,
+      "genre": "Ciencia ficción",
+      "synopsis": "Un ladrón que roba secretos a través de los sueños recibe la tarea de implantar una idea.",
+      "rating": 8.8,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZDYwMDU0NTktMjg1MC00ZWNiLWE2ZTQtYzczZWMxZGM3OTJmXkEyXkFqcGc@._V1_FMjpg_UX1080_.jpg",
+      "id": 4
+    },
+    {
+      "name": "Pulp Fiction",
+      "type": "MOVIE",
+      "year": 1994,
+      "genre": "Crimen",
+      "synopsis": "Las vidas de dos sicarios, un boxeador y otros personajes se cruzan en historias violentas.",
+      "rating": 8.9,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_FMjpg_UX1055_.jpg",
+      "id": 5
+    },
+    {
+      "name": "Breaking Bad",
+      "type": "SERIES",
+      "year": 2008,
+      "genre": "Drama",
+      "synopsis": "Un profesor de química con cáncer terminal se convierte en fabricante de metanfetamina.",
+      "rating": 9.5,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
+      "id": 6
+    },
+    {
+      "name": "Game of Thrones",
+      "type": "SERIES",
+      "year": 2011,
+      "genre": "Fantasía",
+      "synopsis": "Familias nobles luchan por el control del Trono de Hierro en los Siete Reinos.",
+      "rating": 9.2,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTU2OTg0NTU1M15BMl5BanBnXkFtZTgwMzU1MjMxODE@._V1_FMjpg_UX600_.jpg",
+      "id": 7
+    },
+    {
+      "name": "Stranger Things",
+      "type": "SERIES",
+      "year": 2016,
+      "genre": "Ciencia ficción",
+      "synopsis": "Un grupo de niños enfrenta fuerzas sobrenaturales y experimentos secretos en su pueblo.",
+      "rating": 8.7,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_FMjpg_UX510_.jpg",
+      "id": 8
+    },
+    {
+      "name": "The Office",
+      "type": "SERIES",
+      "year": 2005,
+      "genre": "Comedia",
+      "synopsis": "La vida cotidiana de los empleados de una oficina de ventas de papel.",
+      "rating": 9,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjQwYzBlYzUtZjhhOS00ZDQ0LWE0NzAtYTk4MjgzZTNkZWEzXkEyXkFqcGc@._V1_FMjpg_UY1922_.jpg",
+      "id": 9
+    },
+    {
+      "name": "Friends",
+      "type": "SERIES",
+      "year": 1994,
+      "genre": "Comedia",
+      "synopsis": "Seis amigos viven sus amores y trabajos en Nueva York.",
+      "rating": 8.9,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTU2YmM5ZjctOGVlMC00YTczLTljM2MtYjhlNGI5YWMyZjFkXkEyXkFqcGc@._V1_FMjpg_UX680_.jpg",
+      "id": 10
+    }
+  ]
+}
